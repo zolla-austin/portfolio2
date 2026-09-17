@@ -5,80 +5,40 @@ import ProjectCard from './ProjectCard'
 
 const projects = [
   {
-    title: 'ShopFlow — E-Commerce Platform',
+    title: 'EasyShop — Full-Stack E-Commerce Platform',
     description:
-      'Full-featured online store with dynamic product filtering, shopping cart, wishlist management, and Stripe payment integration. Mobile-first and conversion-optimised.',
+      'An end-to-end commerce platform with a Next.js storefront, Express API, PostgreSQL database, Paystack payments, admin dashboard, and a React Native rider delivery app.',
     challengeSolution:
-      'Built a scalable e-commerce experience by implementing responsive layouts, efficient state management, and optimized product filtering for a smooth shopping experience.',
+      'Built the complete shopping and delivery workflow, connecting customers, administrators, payments, and riders through secure APIs and live GPS tracking.',
     achievements: [
-      'Fully Responsive Design',
-      'Secure Authentication',
-      'Optimized Performance',
-      'Smooth Shopping Experience',
+      'End-to-End Commerce Flow',
+      'Paystack Integration',
+      'Admin Dashboard',
+      'Live Rider GPS Tracking',
     ],
-    tags: ['React', 'Context API', 'Stripe', 'Tailwind CSS'],
+    tags: ['Next.js', 'Express', 'PostgreSQL', 'Paystack', 'React Native'],
     bgClass: 'bg-gradient-to-br from-[#0d0a2e] via-[#120e45] to-[#0a1a3e]',
     icon: '🛒',
-    badge: 'E-Commerce',
-    github: 'https://github.com/zolla-austin',
-    demo: '#',
+    badge: 'Full-Stack',
+    github: 'https://github.com/zolla-austin/EasyShop',
   },
   {
-    title: 'Folio — Portfolio Showcase',
+    title: 'Emperor — Luxury Product Catalog',
     description:
-      'A custom-designed personal portfolio built with immersive scroll animations, unique asymmetric layouts, and a highly polished visual identity from scratch.',
+      'A refined catalog experience for perfumes, suits, and T-shirts, with a redesigned product grid and a direct WhatsApp-based ordering and payment flow.',
     challengeSolution:
-      'Created a modern and responsive portfolio with reusable components, smooth animations, and an intuitive user experience.',
+      'Simplified product discovery and purchasing by pairing a polished, responsive catalog with a familiar WhatsApp conversion journey.',
     achievements: [
-      'Responsive on All Devices',
-      'Clean & Modern UI',
-      'Fast Loading Performance',
-      'SEO-Friendly Structure',
+      'Redesigned Product Grid',
+      'WhatsApp Ordering',
+      'Streamlined Payment Flow',
+      'Responsive Catalog',
     ],
-    tags: ['Next.js', 'Framer Motion', 'GSAP', 'SCSS'],
+    tags: ['Product Catalog', 'WhatsApp Ordering', 'Responsive Design'],
     bgClass: 'bg-gradient-to-br from-[#0a1628] via-[#0d1f3d] to-[#061224]',
-    icon: '🎨',
-    badge: 'Portfolio',
-    github: 'https://github.com/zolla-austin',
+    icon: '👑',
+    badge: 'Luxury Commerce',
     demo: 'https://emperor001.netlify.app/',
-  },
-  {
-    title: 'AnalyticsPro — SaaS Dashboard',
-    description:
-      'Real-time analytics platform with customisable widget layouts, role-based access, live WebSocket data updates, and interactive chart visualisations.',
-    challengeSolution:
-      'Developed a dynamic analytics dashboard with interactive charts, reusable components, and efficient state management for displaying complex data.',
-    achievements: [
-      'Interactive Dashboard',
-      'Data Visualization',
-      'Reusable Components',
-      'Performance Optimized',
-    ],
-    tags: ['React', 'TypeScript', 'Recharts', 'WebSockets'],
-    bgClass: 'bg-gradient-to-br from-[#0a1f0a] via-[#0d2e14] to-[#071a0d]',
-    icon: '📊',
-    badge: 'SaaS Dashboard',
-    github: 'https://github.com/zolla-austin',
-    demo: '#',
-  },
-  {
-    title: 'Lumina — Content Landing Page',
-    description:
-      'Design-heavy marketing page emphasising bold editorial typography, scroll-triggered animations, and a high-impact visual layout built to drive signups.',
-    challengeSolution:
-      'Designed a conversion-focused landing page with responsive layouts, engaging animations, and a strong emphasis on user experience.',
-    achievements: [
-      'Mobile-First Design',
-      'High Performance',
-      'Smooth Animations',
-      'Modern User Experience',
-    ],
-    tags: ['HTML', 'CSS', 'GSAP', 'JavaScript'],
-    bgClass: 'bg-gradient-to-br from-[#1a0a1f] via-[#2a0f35] to-[#150a20]',
-    icon: '✦',
-    badge: 'Landing Page',
-    github: 'https://github.com/zolla-austin',
-    demo: 'https://naija-bite.netlify.app/',
   },
 ]
 
@@ -105,7 +65,7 @@ export default function Projects() {
             </h2>
           </div>
           <p className="text-body max-w-sm text-sm md:text-right">
-            A curated selection of real-world work spanning e-commerce, SaaS, and marketing — each built with performance and usability at the core.
+            Real-world commerce products built across web, mobile, APIs, databases, payments, and delivery workflows.
           </p>
         </motion.div>
 

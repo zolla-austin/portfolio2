@@ -63,15 +63,16 @@ export default function Hero() {
               {...fadeUp(0.26)}
               className="font-display text-xl sm:text-2xl text-accent tracking-tight mt-5 mb-6"
             >
-              Software Engineer | Frontend Developer
+              Software Engineer | Full-Stack Developer
             </motion.p>
 
             <motion.p
               {...fadeUp(0.32)}
               className="text-body-lg max-w-lg mb-10"
             >
-              I build fast, scalable, and user-focused web applications with React, React Native,
-              Next.js, Tailwind CSS, and modern JavaScript.
+              I build fast, scalable, end-to-end web applications — from database and API design
+              to polished, user-focused interfaces — using React, Next.js, Node.js/Express,
+              PostgreSQL, and React Native.
             </motion.p>
 
             <motion.div {...fadeUp(0.4)} className="flex flex-wrap gap-4">
@@ -124,7 +125,7 @@ export default function Hero() {
                 <div className="flex items-center gap-2">
                   <span className="text-accent text-sm">React</span>
                   <span className="text-primary/20">+</span>
-                  <span className="text-teal text-sm">Tailwind</span>
+                  <span className="text-teal text-sm">Node.js</span>
                 </div>
               </motion.div>
 

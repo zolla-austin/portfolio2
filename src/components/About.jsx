@@ -4,9 +4,9 @@ import { Code2, Palette, Zap, Users } from 'lucide-react'
 
 const traits = [
   { icon: Code2, label: 'Clean Code', desc: 'Well-structured, maintainable, and scalable codebases.' },
-  { icon: Palette, label: 'Pixel Perfect', desc: 'Faithful implementation of every design detail.' },
-  { icon: Zap, label: 'Performance First', desc: 'Optimized for speed, lighthouse scores, and UX.' },
-  { icon: Users, label: 'User-Centric', desc: 'Interfaces built around real human interactions.' },
+  { icon: Palette, label: 'End-to-End', desc: 'Complete ownership from data layer to interface.' },
+  { icon: Zap, label: 'Performance First', desc: 'Optimized APIs, queries, interfaces, and UX.' },
+  { icon: Users, label: 'User-Centric', desc: 'Products built around real human interactions.' },
 ]
 
 export default function About() {
@@ -26,7 +26,7 @@ export default function About() {
         >
           <span className="section-label">// About Me</span>
           <h2 className="heading-section mt-3">
-            Building interfaces<br />
+            Building complete products<br />
             <span className="text-muted italic font-normal">that last.</span>
           </h2>
         </motion.div>
@@ -39,10 +39,10 @@ export default function About() {
           >
             <p className="text-body-lg mb-6">
               I'm <strong>Zolla Austine</strong>, a Software Engineer
-              and Frontend Developer based in Lagos, Nigeria who specialises in building{' '}
-              <strong>user-friendly, high-performance</strong> web
-              applications. I believe great front-end work lives at the intersection of engineering rigour
-              and design sensibility.
+              and Full-Stack Developer based in Lagos, Nigeria who specialises in building{' '}
+              <strong>complete web applications</strong>, from backend architecture and database
+              design to high-performance, user-friendly interfaces. I believe great products live
+              at the intersection of engineering rigour and design sensibility.
             </p>
             <p className="text-body-lg mb-10">
               My focus is on writing{' '}
@@ -98,8 +98,8 @@ export default function About() {
                   <span className="text-emphasis">delightful</span> to use.
                 </p>
                 <p>
-                  From responsive layouts to complex state management, I bring a full-stack mindset
-                  to frontend development — always with the end user in mind.
+                  From database schemas and APIs to responsive interfaces and deployment, I own the
+                  full application lifecycle — always with the end user in mind.
                 </p>
               </div>
 

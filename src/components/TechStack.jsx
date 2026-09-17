@@ -13,24 +13,47 @@ import {
   SiSupabase,
   SiPostgresql,
   SiAngular,
+  SiNodedotjs,
+  SiExpress,
+  SiPhp,
+  SiLaravel,
 } from 'react-icons/si'
 import { TbBrandReactNative } from 'react-icons/tb'
 import { useTheme } from '../contexts/ThemeContext'
 
-const technologies = [
-  { name: 'HTML5', icon: SiHtml5, color: '#E34F26' },
-  { name: 'CSS3', icon: SiCss, color: '#1572B6' },
-  { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
-  { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
-  { name: 'React', icon: SiReact, color: '#61DAFB' },
-  { name: 'React Native', icon: TbBrandReactNative, color: '#087EA4' },
-  { name: 'Next.js', icon: SiNextdotjs, themeAdaptive: true },
-  { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
-  { name: 'Git', icon: SiGit, color: '#F05032' },
-  { name: 'GitHub', icon: SiGithub, themeAdaptive: true },
-  { name: 'Supabase', icon: SiSupabase, color: '#3FCF8E' },
-  { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
-  { name: 'Angular', icon: SiAngular, color: '#DD0031' },
+const technologyGroups = [
+  {
+    name: 'Frontend',
+    technologies: [
+      { name: 'HTML5', icon: SiHtml5, color: '#E34F26' },
+      { name: 'CSS3', icon: SiCss, color: '#1572B6' },
+      { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
+      { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+      { name: 'React', icon: SiReact, color: '#61DAFB' },
+      { name: 'React Native', icon: TbBrandReactNative, color: '#087EA4' },
+      { name: 'Next.js', icon: SiNextdotjs, themeAdaptive: true },
+      { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
+      { name: 'Angular', icon: SiAngular, color: '#DD0031' },
+    ],
+  },
+  {
+    name: 'Backend',
+    technologies: [
+      { name: 'Node.js', icon: SiNodedotjs, color: '#5FA04E' },
+      { name: 'Express', icon: SiExpress, themeAdaptive: true },
+      { name: 'PHP', icon: SiPhp, color: '#777BB4' },
+      { name: 'Laravel', icon: SiLaravel, color: '#FF2D20' },
+      { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
+      { name: 'Supabase', icon: SiSupabase, color: '#3FCF8E' },
+    ],
+  },
+  {
+    name: 'Tools',
+    technologies: [
+      { name: 'Git', icon: SiGit, color: '#F05032' },
+      { name: 'GitHub', icon: SiGithub, themeAdaptive: true },
+    ],
+  },
 ]
 
 export default function TechStack() {
@@ -61,24 +84,35 @@ export default function TechStack() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
-          {technologies.map(({ name, icon: Icon, color, themeAdaptive }, i) => (
-            <motion.div
-              key={name}
-              initial={{ opacity: 0, y: 24 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.45, delay: i * 0.05, ease: 'easeOut' }}
-              className="group flex flex-col items-center justify-center gap-3 p-5 md:p-6 card-surface hover:scale-105 hover:shadow-card-hover transition-all duration-300 cursor-default"
-            >
-              <Icon
-                size={40}
-                className="transition-transform duration-300 group-hover:scale-110"
-                style={{ color: themeAdaptive ? adaptiveColor : color }}
-              />
-              <span className="text-sm text-primary text-center leading-tight">
-                {name}
-              </span>
-            </motion.div>
+        <div className="space-y-12">
+          {technologyGroups.map((group, groupIndex) => (
+            <div key={group.name}>
+              <h3 className="section-label mb-5 text-center md:text-left">// {group.name}</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
+                {group.technologies.map(({ name, icon: Icon, color, themeAdaptive }, i) => (
+                  <motion.div
+                    key={name}
+                    initial={{ opacity: 0, y: 24 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{
+                      duration: 0.45,
+                      delay: groupIndex * 0.1 + i * 0.05,
+                      ease: 'easeOut',
+                    }}
+                    className="group flex flex-col items-center justify-center gap-3 p-5 md:p-6 card-surface hover:scale-105 hover:shadow-card-hover transition-all duration-300 cursor-default"
+                  >
+                    <Icon
+                      size={40}
+                      className="transition-transform duration-300 group-hover:scale-110"
+                      style={{ color: themeAdaptive ? adaptiveColor : color }}
+                    />
+                    <span className="text-sm text-primary text-center leading-tight">
+                      {name}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>

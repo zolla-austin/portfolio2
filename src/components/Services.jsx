@@ -6,8 +6,14 @@ const services = [
   {
     icon: '💻',
     title: 'Web Development',
-    description: 'Custom, performant web apps built with modern frameworks. Clean architecture from day one.',
+    description: 'Custom, performant full-stack web apps built with modern frameworks and clean architecture.',
     accent: '#6c63ff',
+  },
+  {
+    icon: '🗄️',
+    title: 'API & Database Design',
+    description: 'Secure APIs, scalable backend architecture, and reliable relational database design.',
+    accent: '#60a5fa',
   },
   {
     icon: '🛍️',

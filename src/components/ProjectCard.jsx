@@ -81,25 +81,29 @@ export default function ProjectCard({ project, index, inView }) {
         </div>
 
         <div className="flex items-center gap-3 pt-4 border-t border-border mt-auto">
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-caption text-muted hover:text-primary transition-colors duration-300 group/link"
-          >
-            <Github size={14} className="group-hover/link:text-accent transition-colors" />
-            GitHub
-          </a>
-          <span className="text-primary/20 text-xs">|</span>
-          <a
-            href={demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-caption text-accent hover:text-primary transition-colors duration-300 group/link"
-          >
-            <ExternalLink size={14} />
-            Live Demo
-          </a>
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-caption text-muted hover:text-primary transition-colors duration-300 group/link"
+            >
+              <Github size={14} className="group-hover/link:text-accent transition-colors" />
+              GitHub
+            </a>
+          )}
+          {github && demo && <span className="text-primary/20 text-xs">|</span>}
+          {demo && (
+            <a
+              href={demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-caption text-accent hover:text-primary transition-colors duration-300 group/link"
+            >
+              <ExternalLink size={14} />
+              Live Demo
+            </a>
+          )}
         </div>
       </div>
     </motion.article>
