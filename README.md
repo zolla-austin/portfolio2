@@ -26,3 +26,34 @@ handled via Cursor.
 ## Contact
 Email: austinezolla@gmail.com
 GitHub: github.com/zolla-austin
+
+## API
+
+The Tech Stack section loads its tools from a small REST API. The API runs through Netlify Functions. `netlify dev` is required to test it locally. Plain `npm run dev` does not serve `/api`.
+
+| Method | Path | Result |
+| --- | --- | --- |
+| GET | `/api/tools` | `{ "data": [ ...all tools ] }` |
+| GET | `/api/tools?category=Frontend` | Tools in that category. The match is case-insensitive. |
+| GET | `/api/tools/:id` | `{ "data": { ...tool } }`, or `404` with `{ "error": "Tool not found" }` |
+| other | any | `405` with `{ "error": "Method not allowed" }` |
+| GET | any other path | `404` with `{ "error": "Route not found" }` |
+
+Example:
+
+```json
+{
+  "data": {
+    "id": "html",
+    "name": "HTML5",
+    "category": "Frontend",
+    "logo": "/logos/html.svg"
+  }
+}
+```
+
+Start the site and the API together:
+
+```bash
+npx netlify dev
+```
