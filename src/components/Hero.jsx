@@ -101,19 +101,7 @@ export default function Hero() {
                   src={profilePhoto}
                   alt="Zolla Austine – Software Engineer"
                   className="w-full h-full object-cover object-center"
-                  onError={(e) => {
-                    e.target.style.display = 'none'
-                    e.target.parentElement.classList.add('photo-fallback')
-                  }}
                 />
-
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-surface to-card opacity-0 photo-fallback:opacity-100 transition-opacity">
-                  <div className="w-24 h-24 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center mb-4">
-                    <span className="font-display font-black text-3xl text-accent">ZA</span>
-                  </div>
-                  <span className="text-muted text-sm">Add your photo as</span>
-                  <code className="text-accent text-xs mt-1">src/assets/profile.png</code>
-                </div>
               </div>
 
               <motion.div

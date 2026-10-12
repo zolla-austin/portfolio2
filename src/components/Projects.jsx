@@ -48,8 +48,8 @@ const viekGroups = [
     title: 'Data integrity',
     items: [
       'Corrected type mismatches between URL parameters and numeric IDs that broke client deletion and project filtering.',
-      'Replaced length-based ID generation, which could create duplicate IDs after deletion, with a monotonic counter.',
-      "Cascade-deleted a client's projects when the client is removed, so no orphaned records remain.",
+      'Replaced length-based ID generation with a monotonic counter.',
+      "Cascade-deleted a client's projects when the client is removed.",
     ],
   },
   {
@@ -57,7 +57,7 @@ const viekGroups = [
     items: [
       'Stored passwords as bcrypt hashes, excluded password data from API responses, and replaced a forgeable placeholder token with signed, one-hour JWTs in HttpOnly, SameSite cookies.',
       'Restricted CORS to the configured frontend origin and added login rate limiting with generic error messages.',
-      'Added server-side validation for trimmed input, types, email format, length limits, duplicate emails, and numeric IDs, and returned sanitized JSON errors for malformed requests and unknown routes.',
+      'Added server-side validation for trimmed input, types, email format, length limits, duplicate emails, and numeric IDs, with sanitized JSON errors for malformed requests and unknown routes.',
     ],
   },
   {
@@ -84,7 +84,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-14"
         >
-          <span className="section-label">// Featured Work</span>
+          <span className="section-label">// Selected Work</span>
           <h2 className="heading-section mt-3">Selected Work</h2>
         </motion.div>
 
