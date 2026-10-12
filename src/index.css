@@ -14,13 +14,13 @@
 
 /* Dark theme (default) */
 [data-theme="dark"] {
-  --bg-primary: #080810;
-  --bg-secondary: #0f0f1a;
-  --bg-tertiary: #13131f;
+  --bg-primary: #000000;
+  --bg-secondary: #000000;
+  --bg-tertiary: #000000;
   --text-primary-rgb: 240, 240, 248;
   --text-secondary-rgb: 133, 133, 168;
   --border-color: rgba(255, 255, 255, 0.07);
-  --scrollbar-track: #080810;
+  --scrollbar-track: #000000;
   --scrollbar-thumb: #2a2a45;
   --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
   --card-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.45);
@@ -35,23 +35,23 @@
 
 /* Light theme */
 [data-theme="light"] {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --bg-tertiary: #ffffff;
-  --text-primary-rgb: 33, 37, 41;
-  --text-secondary-rgb: 108, 117, 125;
-  --border-color: rgba(0, 0, 0, 0.1);
-  --scrollbar-track: #f8f9fa;
-  --scrollbar-thumb: #dee2e6;
-  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
-  --card-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.06);
-  --grid-line: rgba(0, 0, 0, 0.06);
-  --dot-pattern: rgba(0, 0, 0, 0.05);
-  --badge-bg: rgba(0, 0, 0, 0.04);
-  --overlay-bg: rgba(0, 0, 0, 0.5);
-  --overlay-border: rgba(255, 255, 255, 0.2);
-  --selection-bg: rgba(108, 99, 255, 0.2);
-  --selection-color: #212529;
+  --bg-primary: #000000;
+  --bg-secondary: #000000;
+  --bg-tertiary: #000000;
+  --text-primary-rgb: 240, 240, 248;
+  --text-secondary-rgb: 180, 180, 196;
+  --border-color: rgba(255, 255, 255, 0.07);
+  --scrollbar-track: #000000;
+  --scrollbar-thumb: #2a2a45;
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --grid-line: rgba(255, 255, 255, 0.04);
+  --dot-pattern: rgba(255, 255, 255, 0.04);
+  --badge-bg: rgba(255, 255, 255, 0.04);
+  --overlay-bg: rgba(0, 0, 0, 0.4);
+  --overlay-border: rgba(255, 255, 255, 0.15);
+  --selection-bg: rgba(108, 99, 255, 0.3);
+  --selection-color: #fff;
 }
 
 html { scroll-behavior: smooth; }

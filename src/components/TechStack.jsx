@@ -1,39 +1,58 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
-const categoryOrder = ['Frontend', 'Backend', 'Database', 'Mobile', 'Other']
+const technologyGroups = [
+  {
+    name: 'Frontend',
+    technologies: [
+      { name: 'HTML5', logo: '/logos/html5.svg' },
+      { name: 'CSS3', logo: '/logos/css3.svg' },
+      { name: 'JavaScript', logo: '/logos/javascript.svg' },
+      { name: 'TypeScript', logo: '/logos/typescript.svg' },
+      { name: 'React', logo: '/logos/react.svg' },
+      { name: 'React Native', logo: '/logos/react-native.svg' },
+      { name: 'Next.js', logo: '/logos/nextjs.svg' },
+      { name: 'Tailwind CSS', logo: '/logos/tailwindcss.svg' },
+    ],
+  },
+  {
+    name: 'Backend',
+    technologies: [
+      { name: 'Node.js', logo: '/logos/nodejs.svg' },
+      { name: 'Express', logo: '/logos/express.svg' },
+      { name: 'Laravel', logo: '/logos/laravel.svg' },
+      { name: 'PostgreSQL', logo: '/logos/postgresql.svg' },
+      { name: 'REST API' },
+    ],
+  },
+  {
+    name: 'Other',
+    technologies: [
+      { name: 'Git', logo: '/logos/git.svg' },
+      { name: 'GitHub', logo: '/logos/github.svg' },
+    ],
+  },
+]
+
+function RestApiIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="w-10 h-10 text-primary transition-transform duration-300 group-hover:scale-110"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      aria-hidden="true"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3.5M16 7V3.5M6.5 7h11v4.5a5.5 5.5 0 0 1-11 0V7z" />
+      <path strokeLinecap="round" d="M12 17v3.5" />
+    </svg>
+  )
+}
 
 export default function TechStack() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
-  const [tools, setTools] = useState([])
-  const [status, setStatus] = useState('loading')
-
-  useEffect(() => {
-    const controller = new AbortController()
-
-    fetch('/api/tools', { signal: controller.signal })
-      .then(async (response) => {
-        if (!response.ok) throw new Error('Request failed')
-        const body = await response.json()
-        if (!Array.isArray(body?.data)) throw new Error('Invalid response')
-        setTools(body.data)
-        setStatus('ready')
-      })
-      .catch((error) => {
-        if (error.name === 'AbortError') return
-        setStatus('error')
-      })
-
-    return () => controller.abort()
-  }, [])
-
-  const groups = categoryOrder
-    .map((name) => ({
-      name,
-      technologies: tools.filter((tool) => tool.category === name),
-    }))
-    .filter((group) => group.technologies.length > 0)
 
   return (
     <section id="tech-stack" className="py-24 lg:py-32 bg-surface relative overflow-hidden">
@@ -57,49 +76,43 @@ export default function TechStack() {
           </p>
         </motion.div>
 
-        {status === 'loading' && (
-          <p className="text-body text-center">Loading tools...</p>
-        )}
-
-        {status === 'error' && (
-          <p className="text-body text-center">Couldn't load tools right now.</p>
-        )}
-
-        {status === 'ready' && (
-          <div className="space-y-12">
-            {groups.map((group, groupIndex) => (
-              <div key={group.name}>
-                <h3 className="section-label mb-5 text-center md:text-left">// {group.name}</h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
-                  {group.technologies.map((tool, i) => (
-                    <motion.div
-                      key={tool.id}
-                      initial={{ opacity: 0, y: 24 }}
-                      animate={inView ? { opacity: 1, y: 0 } : {}}
-                      transition={{
-                        duration: 0.45,
-                        delay: groupIndex * 0.1 + i * 0.05,
-                        ease: 'easeOut',
-                      }}
-                      className="group flex flex-col items-center justify-center gap-3 p-5 md:p-6 card-surface hover:scale-105 hover:shadow-card-hover transition-all duration-300 cursor-default"
-                    >
+        <div className="space-y-12">
+          {technologyGroups.map((group, groupIndex) => (
+            <div key={group.name}>
+              <h3 className="section-label mb-5 text-center md:text-left">// {group.name}</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
+                {group.technologies.map((tool, i) => (
+                  <motion.div
+                    key={tool.name}
+                    initial={{ opacity: 0, y: 24 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{
+                      duration: 0.45,
+                      delay: groupIndex * 0.1 + i * 0.05,
+                      ease: 'easeOut',
+                    }}
+                    className="group flex flex-col items-center justify-center gap-3 p-5 md:p-6 card-surface hover:scale-105 hover:shadow-card-hover transition-all duration-300 cursor-default"
+                  >
+                    {tool.name === 'REST API' ? (
+                      <RestApiIcon />
+                    ) : (
                       <img
                         src={tool.logo}
-                        alt={tool.name}
-                        width="24"
-                        height="24"
-                        className="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
+                        alt=""
+                        width="40"
+                        height="40"
+                        className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
                       />
-                      <span className="text-sm text-primary text-center leading-tight">
-                        {tool.name}
-                      </span>
-                    </motion.div>
-                  ))}
-                </div>
+                    )}
+                    <span className="text-sm text-primary text-center leading-tight">
+                      {tool.name}
+                    </span>
+                  </motion.div>
+                ))}
               </div>
-            ))}
-          </div>
-        )}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
