@@ -10,12 +10,9 @@ import {
   SiTailwindcss,
   SiGit,
   SiGithub,
-  SiSupabase,
   SiPostgresql,
-  SiAngular,
   SiNodedotjs,
   SiExpress,
-  SiPhp,
   SiLaravel,
 } from 'react-icons/si'
 import { TbBrandReactNative } from 'react-icons/tb'
@@ -33,7 +30,6 @@ const technologyGroups = [
       { name: 'React Native', icon: TbBrandReactNative, color: '#087EA4' },
       { name: 'Next.js', icon: SiNextdotjs, themeAdaptive: true },
       { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
-      { name: 'Angular', icon: SiAngular, color: '#DD0031' },
     ],
   },
   {
@@ -41,10 +37,8 @@ const technologyGroups = [
     technologies: [
       { name: 'Node.js', icon: SiNodedotjs, color: '#5FA04E' },
       { name: 'Express', icon: SiExpress, themeAdaptive: true },
-      { name: 'PHP', icon: SiPhp, color: '#777BB4' },
       { name: 'Laravel', icon: SiLaravel, color: '#FF2D20' },
       { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
-      { name: 'Supabase', icon: SiSupabase, color: '#3FCF8E' },
     ],
   },
   {

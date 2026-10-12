@@ -41,7 +41,7 @@ export default function Contact() {
             className="space-y-6"
           >
             {[
-              { icon: Mail, label: 'Email', value: 'cletusidu9@gmail.com', href: 'mailto:cletusidu9@gmail.com' },
+              { icon: Mail, label: 'Email', value: 'austinezolla@gmail.com', href: 'mailto:austinezolla@gmail.com' },
               { icon: Phone, label: 'Phone', value: '07041793529', href: 'tel:07041793529' },
               { icon: MapPin, label: 'Location', value: 'Lagos, Nigeria', href: null },
             ].map(({ icon: Icon, label, value, href }) => (
