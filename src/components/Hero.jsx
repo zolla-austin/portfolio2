@@ -70,8 +70,8 @@ export default function Hero() {
               {...fadeUp(0.32)}
               className="text-body-lg max-w-lg mb-10"
             >
-              I build fast, scalable, end-to-end web applications — from database and API design
-              to polished, user-focused interfaces — using React, Next.js, Node.js/Express,
+              I build fast, scalable, end-to-end web applications, from database and API design
+              to polished, user-focused interfaces, using React, Next.js, Node.js/Express,
               PostgreSQL, and React Native.
             </motion.p>
 

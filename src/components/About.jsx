@@ -38,18 +38,10 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.15 }}
           >
             <p className="text-body-lg mb-6">
-              I'm <strong>Zolla Austine</strong>, a Software Engineer
-              and Full-Stack Developer based in Lagos, Nigeria who specialises in building{' '}
-              <strong>complete web applications</strong>, from backend architecture and database
-              design to high-performance, user-friendly interfaces. I believe great products live
-              at the intersection of engineering rigour and design sensibility.
+              I'm Zolla Austine, a Software Engineer and Full-Stack Developer based in Lagos, Nigeria, who specializes in building complete web applications, from backend architecture and database design to high-performance, user-friendly interfaces. I believe great products live at the intersection of engineering rigor and design sensibility.
             </p>
             <p className="text-body-lg mb-10">
-              My focus is on writing{' '}
-              <span className="text-accent-inline">well-structured, scalable code</span> that not
-              only looks stunning but performs excellently under real-world conditions. Whether it's a
-              landing page, a SaaS dashboard, or a full e-commerce platform — I bring the same obsessive
-              attention to detail to every project.
+              My focus is on writing well-structured, scalable code that not only looks good but performs well under real-world conditions. Whether it's a landing page, a SaaS dashboard, or a full e-commerce platform, I bring the same attention to detail to every project.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
