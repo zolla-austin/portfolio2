@@ -8,8 +8,8 @@ const linkedInPath = 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.03
 const socials = [
   { path: siGithub.path, label: 'GitHub', href: 'https://github.com/zolla-austin', color: '#FFFFFF' },
   { path: linkedInPath, label: 'LinkedIn', href: 'https://www.linkedin.com/in/zolla-austine-9b02a5376', color: '#0A66C2' },
-  { path: siInstagram.path, label: 'Instagram', href: 'https://www.instagram.com/zollaaustin?igsh=M3F6ZDlyOHdsYWFx', color: '#E4405F' },
-  { path: siX.path, label: 'X', href: '#', color: '#FFFFFF' },
+  { path: siInstagram.path, label: 'Instagram', href: 'https://www.instagram.com/code_with_austine?stkn=M3F6ZDlyOHdsYWFx', color: '#E4405F' },
+  { path: siX.path, label: 'X', href: 'https://x.com/CletusAustine31', color: '#FFFFFF' },
 ]
 
 export default function Contact() {

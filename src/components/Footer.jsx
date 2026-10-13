@@ -1,12 +1,6 @@
-import { Github, Linkedin, Twitter, Globe, Heart } from 'lucide-react'
+import { Heart } from 'lucide-react'
 
 const links = ['About', 'Tech Stack', 'Projects', 'Services', 'Contact']
-const socials = [
-  { icon: Github, href: 'https://github.com/zolla-austin', label: 'GitHub' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Globe, href: '#', label: 'Dribbble' },
-]
 
 export default function Footer() {
   const scrollTo = (id) => {
@@ -39,19 +33,19 @@ export default function Footer() {
             ))}
           </ul>
 
-          <div className="flex gap-3">
-            {socials.map(({ icon: Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                aria-label={label}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg border border-border bg-card flex items-center justify-center text-muted hover:text-accent hover:border-accent/30 transition-all duration-300"
-              >
-                <Icon size={14} />
-              </a>
-            ))}
+          <div className="flex items-center gap-3 rounded-2xl border border-border bg-card px-3.5 py-2.5">
+            <div className="relative flex h-10 w-10 shrink-0 items-center justify-center">
+              <span className="absolute inset-0 rounded-full border border-accent/35" />
+              <span className="absolute inset-[5px] rounded-full border border-teal/40" />
+              <span className="font-display text-xs font-black tracking-tight text-primary">ZA</span>
+            </div>
+            <div className="text-left leading-tight">
+              <p className="flex items-center gap-1.5 text-sm text-primary">
+                <span className="h-1.5 w-1.5 rounded-full bg-teal animate-pulse" />
+                Open for work
+              </p>
+              <p className="text-caption">Let’s build something.</p>
+            </div>
           </div>
         </div>
 
